@@ -28,8 +28,8 @@ import {
   Building,
   ArrowLeft,
   Home,
-  CheckCircle,
-  Apple,
+  Circle,
+  CheckCircle2,
 } from "lucide-react";
 import { Gantari, Poppins } from "next/font/google";
 
@@ -1078,10 +1078,10 @@ function CheckoutModal({
 
   const paymentMethods: PaymentMethod[] = [
     {
-      id: "apple-pay",
-      name: "Apple Pay",
-      icon: Apple,
-      description: "Pay securely with Apple Pay",
+      id: "mobile-pay",
+      name: "Mobile Pay",
+      icon: Smartphone,
+      description: "Pay securely with mobile payment",
       color: "bg-black",
     },
     {
@@ -1428,7 +1428,9 @@ function CheckoutModal({
               {checkoutStep === 3 && (
                 <div className="text-center space-y-6">
                   <div className="bg-green-50 rounded-2xl p-8">
-                    <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+                    <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Check className="w-8 h-8 text-white" />
+                    </div>
                     <h3
                       className={`text-2xl font-bold text-slate-900 mb-2 ${gantari.className}`}
                     >
